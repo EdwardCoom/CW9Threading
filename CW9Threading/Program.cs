@@ -1,13 +1,23 @@
-﻿using System;
+﻿// Name: Zach Coomer
+// Date: 3/6/2023
+// Assignment: CW9: Threading in C#
+// Class: 352
+// Description: Class to store main, program used to determine pi with random dart throws
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace CW9Threading
 {
+    /// <summary>
+    /// This class houses Main()
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -33,18 +43,18 @@ namespace CW9Threading
 
                 thread.Start();
 
-                Thread.Sleep(16);
+                Thread.Sleep(16); // pauses main for 16 milliseconds to ensure that the random number generators in each FindPiThread get a unique seed.
             }
 
-            foreach (Thread thread in threads) { thread.Join(); }
+            foreach (Thread thread in threads) { thread.Join(); } // tells Main() to wait until every thread is done before continuing
 
             long count = 0;
-            foreach (FindPiThread piThread in findPiThreads) 
+            foreach (FindPiThread piThread in findPiThreads) // adds the dart throws inside the dartboard together from each thread
             {
                 count += piThread.DartInsideCount;
             }
             
-            double pi = ((double)4 * (count) / (numDarts * numThreads));
+            double pi = ((double)4 * (count) / (numDarts * numThreads)); // pi calculation
 
             Console.WriteLine("Pi = " + pi + "\nPress any key to close");
 
