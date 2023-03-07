@@ -31,7 +31,9 @@ namespace CW9Threading
             List<Thread> threads = new List<Thread>();
             List<FindPiThread> findPiThreads = new List<FindPiThread>();
 
+            Stopwatch stopwatch = new Stopwatch();
 
+            stopwatch.Start(); // Time begin
 
             for (int i = 0; i < numThreads; i++)
             {
@@ -56,7 +58,9 @@ namespace CW9Threading
             
             double pi = ((double)4 * (count) / (numDarts * numThreads)); // pi calculation
 
-            Console.WriteLine("Pi = " + pi + "\nPress any key to close");
+            stopwatch.Stop(); // Time end
+
+            Console.WriteLine("Pi = " + pi + "\nTime: " + stopwatch.Elapsed + "\nPress any key to close"); // Pi and time results
 
             Console.ReadKey();
         }
