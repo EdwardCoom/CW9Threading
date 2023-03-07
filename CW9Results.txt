@@ -1,0 +1,43 @@
+Zach Coomer 
+CW9: Threading in C# Stored Results for Extra Credit
+
+
+Enter the number of darts per thread: 1000
+Enter the number of threads: 3
+Pi = 3.176
+Time: 00:00:00.0896404
+
+Enter the number of darts per thread: 300
+Enter the number of threads: 3
+Pi = 3.00444444444444
+Time: 00:00:00.0876649
+
+Enter the number of darts per thread: 1000
+Enter the number of threads: 10
+Pi = 3.136
+Time: 00:00:00.3023314
+
+Enter the number of darts per thread: 10000
+Enter the number of threads: 3
+Pi = 3.142
+Time: 00:00:00.0900757
+
+Enter the number of darts per thread: 10000
+Enter the number of threads: 10
+Pi = 3.1456
+Time: 00:00:00.2991703
+
+Enter the number of darts per thread: 100000
+Enter the number of threads: 3
+Pi = 3.14189333333333
+Time: 00:00:00.0855239
+
+Enter the number of darts per thread: 12923912
+Enter the number of threads: 7
+Pi = 3.14160321027963
+Time: 00:00:00.7179455
+
+Enter the number of darts per thread: 99999999
+Enter the number of threads: 20
+Pi = 3.14164126541641
+Time: 00:00:07.9481189
